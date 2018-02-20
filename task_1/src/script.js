@@ -4,8 +4,6 @@ window.onload = function() {
     var shop2 = document.getElementById('shop2');
     var shop3 = document.getElementById('shop3');
 
-   
-
     function show(element) {
         return function() {
             var chosenElem = element.nextElementSibling;

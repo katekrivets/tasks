@@ -1,4 +1,6 @@
 window.onload = function() {
+
+    // delete element from basket
     var product = document.getElementsByClassName("delete-elem");
 
     for (var i = 0; i < product.length; i++) {
@@ -11,4 +13,7 @@ window.onload = function() {
             chosenProduct.parentNode.removeChild(chosenProduct);
         }
     }
+
+    // count price
+     
 }

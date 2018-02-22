@@ -12,6 +12,9 @@
         line-height: 1.3em;
         font-size: 12px;
     }
+    main {
+        padding: 3vh;
+    }
     /******* DISCOUNT FORM ***********/
     #discount-form {
         padding: 10px;
@@ -106,9 +109,12 @@
 @media (min-width: 320px) and (max-width: 1023px) {
     /****** MAIN *******/
     * {
-        letter-spacing: 0.5px;
+        letter-spacing: 0.25px;
         line-height: 1.2em;
-        font-size: 11px;
+        font-size: 12px;
+    }
+    main {
+        padding: 10px 0;
     }
     /******* DISCOUNT FORM ***********/
     #discount-form {
@@ -168,13 +174,21 @@
         padding: 10px 5px;
     }
     .quantity {
-        width: 30%;
+        width: 110px;
+        min-width:70px;
     }
     .delete {
         text-align: right;
     }
+    .price {
+        min-width: 70px;
+        width: 100px;
+        text-align: left;
+        padding-left: 10px;
+    }
     .total {
         text-align: right;
+        min-width: 70px;
     }
     /***** MOBILE PRODUCTS *******/
     table {
@@ -184,8 +198,11 @@
     .product-name {
         padding-left: 8px;
     }
+    td[rowspan="2"] {
+        width:105px;
+    }
     /***** MOBILE HIDDEN *****/
-    .desktop-table .sum2,
+    .sum2,
     .desktop-table .price-discount,
     .delivery-type p,
     .desktop-table .delete,
@@ -230,7 +247,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3vh;
 }
 
 section {

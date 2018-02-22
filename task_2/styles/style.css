@@ -78,7 +78,6 @@
         padding: 20px 0;
         vertical-align: middle;
         text-align: center;
-        min-height: 140px;
     }
     .table-cell .content {
         display: inline-block;
@@ -205,6 +204,7 @@ input[type="button"],
 input[type="submit"],
 .input-checkbox {
 -webkit-appearance: none;
+-moz-appearance: none;
 border-radius: 0;
 }
 .product-img {

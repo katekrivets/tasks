@@ -1,0 +1,383 @@
+@font-face {
+    font-family: "Helvetica Neue Light";
+    src: url("/style/HelveticaNeue_Light.ttf");
+}
+
+/****** DESKTOP *****/
+
+@media (min-width: 1024px) {
+    /*** MAIN ***/
+    * {
+        letter-spacing: 1px;
+        line-height: 1.3em;
+        font-size: 12px;
+    }
+    /******* DISCOUNT FORM ***********/
+    #discount-form {
+        padding: 10px;
+        min-height: 65px;
+        height: 10vh;
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-end;
+    }
+    input[type="text"] {
+        width: 150px;
+        height: 37px;
+        padding: 0 0 5px;
+        margin: 0 25px;
+        border: 1px solid transparent;
+        border-bottom: 1px solid hsla(0, 0%, 0%, 0.5);
+        border-radius: 0;
+        background: white;
+    }
+    input[type="text"]:focus {
+        box-shadow: 0;
+        outline: none;
+    }
+    input[type="submit"] {
+        min-width: 150px;
+        height: 37px;
+        padding: 10px 50px;
+        border-radius: 0;
+        border: 1px solid hsla(0, 0%, 0%, 0.5);
+        background: white;
+    }
+    #discount-label {
+        line-height: 37px;
+        vertical-align: middle;
+    }
+    /******* PRODUCTS *********/
+    .table {
+        display: table;
+        width: 100%;
+        border-top: 2px solid rgba(0, 0, 0, 0.3);
+    }
+    .table:not(:first-of-type) .table-header {
+        visibility: hidden;
+        height: 0;
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
+    .table:not(:first-of-type) .table-header .table-cell {
+        margin: 0;
+        padding-top: 0;
+        line-height: 0;
+    }
+    .table-row {
+        display: table-row;
+        padding: 10px;
+    }
+    .product+.product .table-cell {
+        border-top: 2px solid rgba(0, 0, 0, 0.3);
+    }
+    .table-cell {
+        display: table-cell;
+        padding: 20px 0;
+        vertical-align: middle;
+        text-align: center;
+        min-height: 140px;
+    }
+    .table-cell .content {
+        display: inline-block;
+        height: 80px;
+    }
+    .table-row:first-child .table-cell {
+        padding: 15px 20px 0;
+    }
+  
+
+    /**** DELIVERY ******/
+    .delivery-type p {
+        margin-top: 5px;
+        font-size: 0.9em;
+        color: #9B9B9B;
+    }
+    /***** DESKTOP HIDDEN ****/
+    .total {
+        display: none;
+    }
+    .mobile-table {
+        display: none;
+    }
+}
+
+/****** MOBILE *****/
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    /****** MAIN *******/
+    * {
+        letter-spacing: 0.5px;
+        line-height: 1.2em;
+        font-size: 11px;
+    }
+    /******* DISCOUNT FORM ***********/
+    #discount-form {
+        min-height: 110px;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #discount-label {
+        width: 100%;
+        line-height: 30px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    input[type="text"] {
+        width: 100%;
+        height: auto;
+        padding: 0 10px 3px 40px;
+        margin: 0px auto 10px;
+        border: 1px solid transparent;
+        border-bottom: 2px solid hsla(0, 0%, 0%, 0.3);
+        border-radius: 0;
+        background: white;
+        text-align: middle;
+    }
+    input[type="text"]:focus {
+        box-shadow: 0;
+        outline: none;
+    }
+    input[type="submit"] {
+        width: 100%;
+        height: 39px;
+        padding: 10px 50px;
+        margin: 5px auto;
+        border-radius: 0;
+        border: 2px solid hsla(0, 0%, 0%, 0.3);
+        background: white;
+    }
+    /******** PRODUCTS ********/
+    .table {
+        display: table;
+        width: 100%;
+    }
+    .table:not(:last-child) {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.295);
+        padding-bottom: 10px;
+    }
+    .table-row {
+        display: table-row;
+    }
+    .table-column {
+        display: table-column;
+    }
+    .table-cell {
+        display: table-cell;
+        padding: 10px 5px;
+    }
+    .quantity {
+        width: 30%;
+    }
+    .delete {
+        text-align: right;
+    } 
+    .total {
+        text-align: right;
+    }
+
+    /***** MOBILE PRODUCTS *******/
+    table {
+        width: 100%;
+        margin-top: 20px;
+    } 
+    .product-name {
+        padding-left: 8px;
+    }
+
+    /***** MOBILE HIDDEN *****/
+    .desktop-table .sum2, 
+    .desktop-table .price-discount, 
+    .delivery-type p, 
+    .desktop-table .delete, 
+    .desktop-table .picture, 
+    .desktop-table .name {
+        display: none;
+    }
+
+}
+/****** PRODUCT IMAGE ********/
+.product-img {
+    display: block;
+    min-height: 0px;
+    height: 140px;
+    max-width: 100px;
+    background: #c9c9c9;
+    border: 1px solid #979797;
+    margin: 0;
+}
+
+/*** MAIN ***/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue Light", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh;
+}
+
+section {
+    width: 85%;
+    max-width: 1600px;
+}
+
+/******* QUANTITY INPUT ********/
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    outline: none;
+    border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input {
+    display: inline-flex;
+    align-items: center;
+}
+
+.number-input,
+.number-input * {
+    box-sizing: border-box;
+}
+
+.number-input button {
+    outline: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-input input[type=number] {
+    font-family: sans-serif;
+    max-width: 50px;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+}
+
+.number-input button {
+    font-size: 20px;
+    line-height: 1em;
+    vertical-align: middle;
+    color: #979797;
+}
+
+/********** DELETE BUTTON **********/
+
+.delete-elem, .delete-mobile {
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/********** NAME *************/
+
+.brand-name {
+    text-align: left;
+}
+
+/******* PRICE ********/
+
+.sum {
+    width: 100%;
+    text-align: right;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    line-height: 0.1em;
+    margin: 10px 0;
+}
+
+.sum>span {
+    font-weight: bold;
+    position: relative;
+    top: 7px;
+    background: #fff;
+    padding: 5px 0px 5px 20px;
+}
+
+/******* DELIVERY *********/
+
+.delivery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.delivery-type {
+    margin: 5px 0;
+}
+
+.delivery-type label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 40px;
+}
+
+.delivery-price {
+    width: 40px;
+    margin-left: 20px;
+}
+
+/****** RADIO BUTTONS ******/
+
+.delivery-type label::before,
+.delivery-type label::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.delivery-type label::before {
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border: solid 1px #5a5a5a;
+}
+
+.delivery-type label::after {
+    top: 3px;
+    right: 3px;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.28s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked~label::after {
+    transform: scale(1);
+}

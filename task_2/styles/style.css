@@ -3,213 +3,9 @@
     src: url("/style/HelveticaNeue_Light.ttf");
 }
 
-/****** DESKTOP *****/
-
-@media (min-width: 1024px) {
-    /*** MAIN ***/
-    * {
-        letter-spacing: 1px;
-        line-height: 1.3em;
-        font-size: 12px;
-    }
-    main {
-        padding: 3vh;
-    }
-    /******* DISCOUNT FORM ***********/
-    #discount-form {
-        padding: 10px;
-        min-height: 65px;
-        height: 10vh;
-        display: flex;
-        justify-content: flex-start;
-        align-content: flex-end;
-    }
-    input[type="text"] {
-        width: 150px;
-        height: 37px;
-        padding: 0 0 5px;
-        margin: 0 25px;
-        border: 1px solid transparent;
-        border-bottom: 1px solid hsla(0, 0%, 0%, 0.5);
-        border-radius: 0;
-        background: white;
-    }
-    input[type="text"]:focus {
-        box-shadow: 0;
-        outline: none;
-    }
-    input[type="submit"] {
-        min-width: 150px;
-        height: 37px;
-        padding: 10px 50px;
-        border-radius: 0;
-        border: 1px solid hsla(0, 0%, 0%, 0.5);
-        background: white;
-    }
-    #discount-label {
-        line-height: 37px;
-        vertical-align: middle;
-    }
-    /******* PRODUCTS *********/
-    .table {
-        display: table;
-        width: 100%;
-        border-top: 2px solid rgba(0, 0, 0, 0.3);
-    }
-    div:not(:first-of-type) .table-header {
-        visibility: hidden;
-        height: 0;
-        font-size: 0;
-        margin: 0;
-        padding: 0;
-        line-height: 0;
-    }
-    div:not(:first-of-type) .table-header .table-cell {
-        margin: 0;
-        padding-top: 0;
-        line-height: 0;
-    }
-    .table-row {
-        display: table-row;
-        padding: 10px;
-    }
-    .product+.product .table-cell {
-        border-top: 2px solid rgba(0, 0, 0, 0.3);
-    }
-    .table-cell {
-        display: table-cell;
-        padding: 20px 0;
-        vertical-align: middle;
-        text-align: center;
-    }
-    .table-cell .content {
-        display: inline-block;
-        height: 80px;
-    }
-    .table-row:first-child .table-cell {
-        padding: 15px 20px 0;
-    }
-    /**** DELIVERY ******/
-    .delivery-type p {
-        margin-top: 5px;
-        font-size: 0.9em;
-        color: #9B9B9B;
-    }
-    /***** DESKTOP HIDDEN ****/
-    .total {
-        display: none;
-    }
-    .mobile-table {
-        display: none;
-    }
-}
-
-/****** MOBILE *****/
-
-@media (min-width: 320px) and (max-width: 1023px) {
-    /****** MAIN *******/
-    * {
-        letter-spacing: 0.25px;
-        line-height: 1.2em;
-        font-size: 12px;
-    }
-    main {
-        padding: 10px 0;
-    }
-    /******* DISCOUNT FORM ***********/
-    #discount-form {
-        min-height: 110px;
-        height: 10vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    #discount-label {
-        width: 100%;
-        line-height: 30px;
-        vertical-align: middle;
-        text-align: center;
-    }
-    input[type="text"] {
-        width: 100%;
-        height: auto;
-        padding: 0 10px 3px 40px;
-        margin: 0px auto 10px;
-        border: 1px solid transparent;
-        border-bottom: 2px solid hsla(0, 0%, 0%, 0.3);
-        border-radius: 0;
-        background: white;
-        text-align: middle;
-    }
-    input[type="text"]:focus {
-        box-shadow: 0;
-        outline: none;
-    }
-    input[type="submit"] {
-        width: 100%;
-        height: 39px;
-        padding: 10px 50px;
-        margin: 5px auto;
-        border-radius: 0;
-        border: 2px solid hsla(0, 0%, 0%, 0.3);
-        background: white;
-    }
-    /******** PRODUCTS ********/
-    .table {
-        display: table;
-        width: 100%;
-    }
-    div:not(:last-of-type) .table {
-        border-bottom: 2px solid rgba(0, 0, 0, 0.295);
-        padding-bottom: 10px;
-    }
-    .table-row {
-        display: table-row;
-    }
-    .table-column {
-        display: table-column;
-    }
-    .table-cell {
-        display: table-cell;
-        padding: 10px 5px;
-    }
-    .quantity {
-        width: 110px;
-        min-width:70px;
-    }
-    .delete {
-        text-align: right;
-    }
-    .price {
-        min-width: 70px;
-        width: 100px;
-        text-align: left;
-        padding-left: 10px;
-    }
-    .total {
-        text-align: right;
-        min-width: 70px;
-    }
-    /***** MOBILE PRODUCTS *******/
-    table {
-        width: 100%;
-        margin-top: 20px;
-    }
-    .product-name {
-        padding-left: 8px;
-    }
-    td[rowspan="2"] {
-        width:105px;
-    }
-    /***** MOBILE HIDDEN *****/
-    .sum2,
-    .desktop-table .price-discount,
-    .delivery-type p,
-    .desktop-table .delete,
-    .desktop-table .picture,
-    .desktop-table .name {
-        display: none;
-    }
+/***** DISCOUNT FORM ******/
+input#discount {
+    text-align: center;
 }
 
 /****** PRODUCT IMAGE ********/
@@ -220,10 +16,11 @@ input[type="text"],
 input[type="button"],
 input[type="submit"],
 .input-checkbox {
--webkit-appearance: none;
--moz-appearance: none;
-border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
 }
+
 .product-img {
     display: block;
     min-height: 0px;
@@ -404,3 +201,260 @@ input[type="radio"] {
 input[type="radio"]:checked~label::after {
     transform: scale(1);
 }
+
+
+/****** DESKTOP *****/
+
+@media (min-width: 1024px) {
+    /*** MAIN ***/
+    * {
+        letter-spacing: 1px;
+        line-height: 1.3em;
+        font-size: 12px;
+    }
+
+    main {
+        padding: 3vh;
+    }
+
+    /******* DISCOUNT FORM ***********/
+
+    #discount-form {
+        padding: 10px;
+        min-height: 65px;
+        height: 65px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-end;
+    }
+
+    input[type="text"] {
+        width: 150px;
+        height: 37px;
+        padding: 0 0 5px;
+        margin: 0 25px;
+        border: 1px solid transparent;
+        border-bottom: 1px solid hsla(0, 0%, 0%, 0.5);
+        border-radius: 0;
+        background: white;
+    }
+
+    input[type="text"]:focus {
+        box-shadow: 0;
+        outline: none;
+    }
+
+    input[type="submit"] {
+        min-width: 150px;
+        height: 37px;
+        padding: 10px 50px;
+        border-radius: 0;
+        border: 1px solid hsla(0, 0%, 0%, 0.5);
+        background: white;
+    }
+
+    #discount-label {
+        line-height: 37px;
+        vertical-align: middle;
+    }
+
+    /******* PRODUCTS *********/
+
+    .table {
+        display: table;
+        width: 100%;
+        border-top: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    div:not(:first-of-type) .table-header {
+        visibility: hidden;
+        height: 0;
+        font-size: 0;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
+
+    div:not(:first-of-type) .table-header .table-cell {
+        margin: 0;
+        padding-top: 0;
+        line-height: 0;
+    }
+
+    .table-row {
+        display: table-row;
+        padding: 10px;
+    }
+
+    .product+.product .table-cell {
+        border-top: 2px solid rgba(0, 0, 0, 0.3);
+    }
+
+    .table-cell {
+        display: table-cell;
+        padding: 20px 0;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .table-cell .content {
+        display: inline-block;
+        height: 80px;
+    }
+
+    .table-row:first-child .table-cell {
+        padding: 15px 20px 0;
+    }
+
+    /**** DELIVERY ******/
+
+    .delivery-type p {
+        margin-top: 5px;
+        font-size: 0.9em;
+        color: #9B9B9B;
+    }
+
+    /***** DESKTOP HIDDEN ****/
+
+    .total {
+        display: none;
+    }
+
+    .mobile-table {
+        display: none;
+    }
+
+}
+
+/****** MOBILE *****/
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    /****** MAIN *******/
+    * {
+        letter-spacing: 0.25px;
+        line-height: 1.2em;
+        font-size: 12px;
+    }
+
+    main {
+        padding: 10px 0;
+    }
+
+    /******* DISCOUNT FORM ***********/
+
+    #discount-form {
+        min-height: 110px;
+        height: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #discount-label {
+        width: 100%;
+        line-height: 30px;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        height: auto;
+        padding: 0 10px 3px 40px;
+        margin: 0px auto 10px;
+        border: 1px solid transparent;
+        border-bottom: 2px solid hsla(0, 0%, 0%, 0.3);
+        border-radius: 0;
+        background: white;
+        text-align: middle;
+    }
+
+    input[type="text"]:focus {
+        box-shadow: 0;
+        outline: none;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        height: 39px;
+        padding: 10px 50px;
+        margin: 5px auto;
+        border-radius: 0;
+        border: 2px solid hsla(0, 0%, 0%, 0.3);
+        background: white;
+    }
+
+    /******** PRODUCTS ********/
+
+    .table {
+        display: table;
+        width: 100%;
+    }
+
+    div:not(:last-of-type) .table {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.295);
+        padding-bottom: 10px;
+    }
+
+    .table-row {
+        display: table-row;
+    }
+
+    .table-column {
+        display: table-column;
+    }
+
+    .table-cell {
+        display: table-cell;
+        padding: 10px 5px;
+    }
+
+    .quantity {
+        width: 110px;
+        min-width:70px;
+    }
+
+    .delete {
+        text-align: right;
+    }
+
+    .price {
+        min-width: 70px;
+        width: 100px;
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .total {
+        text-align: right;
+        min-width: 70px;
+    }
+
+    /***** MOBILE PRODUCTS *******/
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .product-name {
+        padding-left: 8px;
+    }
+
+    td[rowspan="2"] {
+        width:105px;
+    }
+
+    /***** MOBILE HIDDEN *****/
+
+    .sum2,
+    .desktop-table .price-discount,
+    .delivery-type p,
+    .desktop-table .delete,
+    .desktop-table .picture,
+    .desktop-table .name {
+        display: none;
+    }
+    
+}
+

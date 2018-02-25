@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Task 2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <script src="src/script.js"></script>
 </head>
-
 <body>
     <main>
+        <!-- discount form -->
         <section>
-            <form id="discount-form">
+            <form id="discount-form" method="post">
                 <label for="discount" id="discount-label">Код купона на скидку</label>
                 <input type="text" id="discount" name="discount">
                 <input type="submit" value="активировать">
             </form>
         </section>
-        <section>
-
+        <!-- shopping cart -->
+        <section id="product-cart">
+            <!-- shopping cart element -->
             <div>
+                <!-- only mobile visible <table> -->
                 <table class="mobile-table">          
                         <tr>
                             <td rowspan="2"><img src="#" class="product-img" alt="product img"></td>
-                            <td  class="product-name">Наименование</td>
+                            <td class="product-name">Наименование</td>
                             <td class="delete"><button class="delete-elem">Удалить &#10005;</button></td>
                         </tr>
                         <tr>
@@ -48,8 +48,8 @@
                             </td>
                         </tr>
                 </table>
+                <!-- desktop table -->
                 <div class="table desktop-table">
-
                     <div class="table-row table-header">
                         <div class="table-cell picture"></div>
                         <div class="table-cell name">Наименование товара</div>
@@ -60,7 +60,7 @@
                         <div class="table-cell price-discount">Цена со скидкой</div>
                         <div class="table-cell delete">Удалить</div>
                     </div>
-
+                    <!-- product description fields-->
                     <div class="table-row product">
                         <div class="table-cell picture">
                             <img src="#" class="product-img" alt="product img">
@@ -68,7 +68,7 @@
                         <div class="table-cell name">
                             <div class="content brand-name">
                                 <div class="row">
-                                    <span>Женское</span>/
+                                    <span>Женское/</span>
                                     <span>Джинсы RXXS</span>
                                 </div>
                                 <div class="row">
@@ -87,23 +87,23 @@
                         <div class="table-cell quantity">
                             <div class=" content">
                                 <div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
-                                    <input type="number" placeholder="0" step="1" min="0" max="10" value="1">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                                    <button class="minus">-</button>
+                                    <input class="product-quantity" type="number" placeholder="1" step="1" min="1" max="10" value="1">
+                                    <button class="plus">+</button>
                                 </div>
                             </div>
                         </div>
                         <div class="table-cell price">
-                            <div class="content">00 000</div>
+                            <div class="content product-price">1 000</div>
                         </div>
                         <div class="table-cell discount-percent">
-                            <div class="content">00%</div>
+                            <div class="content product-discount">00%</div>
                         </div>
                         <div class="table-cell price-discount">
-                            <div class="content">0 000</div>
+                            <div class="content price-with-discount">0 000</div>
                         </div>
                         <div class="table-cell total">
-                            <div class="content">0 000</div>
+                            <div class="content price-with-discount-mobile">0 000</div>
                         </div>
                         <div class="table-cell delete">
                             <div class="content">
@@ -113,18 +113,19 @@
                     </div>
                 </div>
             </div>
-
-                <div>
+            <!-- shopping cart element -->
+            <div>
+                <!-- only mobile visible <table> -->
                 <table class="mobile-table">          
                         <tr>
                             <td rowspan="2"><img src="#" class="product-img" alt="product img"></td>
-                            <td  class="product-name">Наименование</td>
+                            <td class="product-name">Наименование</td>
                             <td class="delete"><button class="delete-elem">Удалить &#10005;</button></td>
                         </tr>
                         <tr>
                             <td colspan="2" class="product-name">
                                 <div>
-                                    <span>Женское</span>/
+                                    <span>Женское/</span>
                                     <span>Джинсы RXXS</span>
                                 </div>
                                 <div>
@@ -141,10 +142,8 @@
                             </td>
                         </tr>
                 </table>
-
-                <!---->
+                <!-- desktop table -->
                 <div class="table desktop-table">
-
                     <div class="table-row table-header">
                         <div class="table-cell picture"></div>
                         <div class="table-cell name">Наименование товара</div>
@@ -155,7 +154,7 @@
                         <div class="table-cell price-discount">Цена со скидкой</div>
                         <div class="table-cell delete">Удалить</div>
                     </div>
-
+                    <!-- product description fields-->
                     <div class="table-row product">
                         <div class="table-cell picture">
                             <img src="#" class="product-img" alt="product img">
@@ -182,23 +181,23 @@
                         <div class="table-cell quantity">
                             <div class=" content">
                                 <div class="number-input">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
-                                    <input type="number" placeholder="0" step="1" min="0" max="10" value="1">
-                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                                    <button class="minus">-</button>
+                                    <input class="product-quantity" type="number" placeholder="1" step="1" min="1" max="10" value="1">
+                                    <button class="plus">+</button>
                                 </div>
                             </div>
                         </div>
                         <div class="table-cell price">
-                            <div class="content">00 000</div>
+                            <div class="content product-price">1 500</div>
                         </div>
                         <div class="table-cell discount-percent">
-                            <div class="content">00%</div>
+                            <div class="content product-discount">00%</div>
+                        </div>
+                        <div class="table-cell price-discount">
+                            <div class="content price-with-discount">0 000</div>
                         </div>
                         <div class="table-cell total">
-                            <div class="content">0 000</div>
-                        </div>
-                        <div class="table-cell  price-discount">
-                            <div class="content">0 000</div>
+                            <div class="content price-with-discount-mobile">0 000</div>
                         </div>
                         <div class="table-cell delete">
                             <div class="content">
@@ -209,40 +208,37 @@
                 </div>
             </div>
         </section>
-
+        <!-- total price  without delivery-->
         <section>
             <div class="sum sum1">
-                <span>Итого:&nbsp;
-                    <span id="total-price">0 000</span> &#8381;</span>
+                <span>Итого:&nbsp;<span class="total-price">0 000</span> &#8381;</span>
             </div>
         </section>
+        <!-- delivery price /radio -->
         <section>
             <h2>Способ доставки</h2>
-            <form class="delivery">
+            <form class="delivery" name="delivery" method="post">
                 <div class="delivery-type">
-                    <input type="radio" name="delivery" id="delivery1" checked>
+                    <input type="radio" name="mydelivery" id="delivery1" checked>
                     <label for="delivery1">
                         <div>Курьерская доставка до двери в любую точку РФ</div>
                         <div class="delivery-price">
-                            <b id="courier-price">000</b> &#8381;
-
+                            <b id="courier-price">200</b> &#8381;
                         </div>
                     </label>
-
                     <p>
-                        Товар доставляется бесплатно курьером до двери Вашего дома при сумме заказа от 00 000 рублей.
-                        <br> В случае заказа на сумму менее 00 000 рублей, доставка будет стоить 000 рублей.
-                        <br> Стоимость 000 руб.
-                        <br> Бесплатно от суммы 00000 руб.
-                        <br>
+                        Товар доставляется бесплатно курьером до двери Вашего дома при сумме заказа от 3 000 рублей.<br>
+                        В случае заказа на сумму менее 3 000 рублей, доставка будет стоить 200 рублей.<br>
+                        Стоимость 200 руб.<br>
+                        Бесплатно от суммы 3 000 руб.
                     </p>
                 </div>
                 <div class="delivery-type">
-                    <input type="radio" name="delivery" id="delivery2">
+                    <input type="radio" name="mydelivery" id="delivery2">
                     <label for="delivery2">
                         <div>Самовывоз из магазина в Санкт-Петербурге</div>
                         <div class="delivery-price">
-                            <b id="pickup-price">0</b> &#8381;
+                            <b id="pickup-price">50</b> &#8381;
                         </div>
                     </label>
                     <p>
@@ -251,14 +247,13 @@
                 </div>
             </form>
         </section>
+        <!-- total price -->
         <section>
             <div class="sum sum2">
-                <span>Итого:&nbsp;
-                    <span id="total-price">00 000</span>&#8381;</span>
+                <span>Итого:&nbsp;<span id="total-price-delivery">00 000</span>&#8381;</span>
             </div>
         </section>
     </main>
-
+    <script src="src/script.js"></script>
 </body>
-
 </html>

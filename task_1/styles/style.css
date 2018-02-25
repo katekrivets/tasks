@@ -1,87 +1,9 @@
 @font-face {
     font-family: "Helvetica Neue Light";
-    src: url("styles/HelveticaNeue_Light.ttf");
+    src: url("HelveticaNeue_Light.ttf");
 }
 
-/********** DESKTOP **********/
-
-@media (min-width: 1024px) {
-    * {
-        font-size: 13px;
-    }
-    .container {
-        width: 75%;
-    }
-    iframe {
-        width: 60%;
-        height: 400px;
-        border: 1px solid #979797;
-        margin-right: 20px;
-    }
-    .drop-down-address {
-        display: none;
-    }
-    .address-map {
-        flex-direction: row-reverse;
-    }
-    .address p {
-        margin: 10px 0;
-    }
-}
-
-/********** MOBILE **********/
-
-@media (min-width: 320px) and (max-width: 1023px) {
-    * {
-        font-size: 14px;
-    }
-    div.address-map {
-        display: none;
-        flex-direction: column-reverse;
-        align-items: center;
-        width: 100%;
-        padding-bottom: 20px;
-    }
-    .container {
-        width: 80%;
-        margin: 10px 0;
-        font-size: 15px;
-    }
-    .shop-name {
-        display: none;
-    }
-    iframe {
-        width: 100%;
-        min-height: 120px;
-        height: 40vh;
-        border: 1px solid #979797;
-    }
-    .address {
-        display: flex;
-        flex-wrap: wrap;
-        margin-left: 20px;
-        width: 90%;
-    }
-    .address p {
-        margin: 15px 10px 0 10px;
-        min-width: 160px;
-    }
-    .drop-down-address {
-        display: flex;
-        width: 95%;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.4);
-        padding: 15px 0 0 10px;
-        justify-content: space-between;
-    }
-    .drop-down-address p:last-child {
-        color: rgba(0, 0, 0, 0.4);
-    }
-    .drop-down-address:hover {
-        cursor: pointer;
-    }
-}
-
-/***** MAIN *********/
+/******** MAIN *********/
 
 * {
     margin: 0;
@@ -121,3 +43,100 @@ main {
 a[href*="tel"]:active {
     color: #838383;
 }
+
+/********** DESKTOP **********/
+
+@media (min-width: 1024px) {
+
+    * {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 75%;
+    }
+
+    .address-map iframe {
+        width: 60%;
+        height: 400px;
+        border: 1px solid #979797;
+        margin-right: 20px;
+    }
+
+    .drop-down-address {
+        display: none;
+    }
+
+    .address-map {
+        flex-direction: row-reverse;
+    }
+
+    .address p {
+        margin: 10px 0;
+    }
+
+}
+
+/********** MOBILE **********/
+
+@media (min-width: 320px) and (max-width: 1023px) {
+
+    * {
+        font-size: 14px;
+    }
+
+    div.address-map {
+        display: none;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 10px 0;
+        font-size: 15px;
+    }
+
+    .shop-name {
+        display: none;
+    }
+
+    .address-map iframe {
+        width: 100%;
+        min-height: 120px;
+        height: 40vh;
+        border: 1px solid #979797;
+    }
+
+    .address {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 20px;
+        width: 90%;
+    }
+
+    .address p {
+        margin: 15px 10px 0 10px;
+        min-width: 160px;
+    }
+
+    .drop-down-address {
+        display: flex;
+        width: 95%;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+        padding: 15px 0 0 10px;
+        justify-content: space-between;
+    }
+
+    .drop-down-address p:last-child {
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    .drop-down-address:hover {
+        cursor: pointer;
+    }
+    
+}
+

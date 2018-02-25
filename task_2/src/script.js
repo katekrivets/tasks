@@ -145,7 +145,9 @@ window.onload = function () {
         for(var j = 0; j < discounts.length; j++) {
           discounts[j].innerHTML = percent;
         }
-      } 
+      } else {
+        alert('Попробуйте ввести в поле "sale".')
+      }
       calculateAll();
   });
   

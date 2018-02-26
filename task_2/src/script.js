@@ -139,9 +139,10 @@ window.onload = function () {
   //listens for discount to be submitted
   discountForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      var percent = "10%";
+      var percent = "00%";
       if(document.getElementById('discount').value === 'sale') {
         var discounts = document.getElementsByClassName('product-discount');
+        percent = "10%";
         for(var j = 0; j < discounts.length; j++) {
           discounts[j].innerHTML = percent;
         }

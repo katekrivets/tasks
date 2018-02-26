@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Helvetica Neue Light";
-    src: url("/style/HelveticaNeue_Light.ttf");
+    src: url("HelveticaNeue_Light.ttf");
 }
 
 /***** DISCOUNT FORM ******/
@@ -158,12 +158,13 @@ input[type=number]::-webkit-outer-spin-button {
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    padding-right: 40px;
+    padding-right: 30px;
 }
 
 .delivery-price {
-    width: 40px;
+    width: 45px;
     margin-left: 20px;
+    text-align: right;
 }
 
 /****** RADIO BUTTONS ******/
@@ -447,7 +448,6 @@ input[type="radio"]:checked~label::after {
 
     /***** MOBILE HIDDEN *****/
 
-    .sum2,
     .desktop-table .price-discount,
     .delivery-type p,
     .desktop-table .delete,
